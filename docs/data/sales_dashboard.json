@@ -1,0 +1,559 @@
+{
+  "project": {
+    "title": "Data Analysis and Business Intelligence Dashboard",
+    "subtitle": "Turning raw sales records into KPI monitoring, commercial insights and executive storytelling.",
+    "description": "This portfolio project organizes transactional sales data into a lightweight BI dashboard focused on revenue, profit, category mix, regional performance and salesperson productivity.",
+    "scope": [
+      "50,000 simulated sales transactions",
+      "Time series covering 2023 and 2024",
+      "Analysis by category, region, product and seller",
+      "Static site deployment ready for GitHub Pages"
+    ]
+  },
+  "meta": {
+    "generated_at": "2026-03-10T15:42:46.689126+00:00",
+    "records": 50000,
+    "period_start": "2023-01-01",
+    "period_end": "2024-12-30",
+    "products": 55,
+    "sellers": 50
+  },
+  "kpis": {
+    "receita_total": 1022740846.16,
+    "lucro_total": 370238047.96,
+    "pedidos": 50000,
+    "ticket_medio": 20454.82,
+    "itens_medios": 7.24,
+    "margem_lucro_pct": 36.2
+  },
+  "highlights": [
+    {
+      "title": "Best revenue month",
+      "metric": "2024-03",
+      "description": "Revenue peaked at R$ 45,679,418 and profit reached R$ 16,409,507."
+    },
+    {
+      "title": "Largest revenue driver",
+      "metric": "Livros",
+      "description": "This category generated R$ 268,194,336, representing 26.2% of total revenue."
+    },
+    {
+      "title": "Highest commercial productivity",
+      "metric": "Samuel Duarte",
+      "description": "Top seller revenue reached R$ 23,302,930 with an average ticket of R$ 21,963."
+    }
+  ],
+  "recommendations": [
+    "Increase commercial focus on Livros, the highest-revenue category, and protect its current 37.0% margin through pricing discipline.",
+    "Review cost structure and discount policy for Informática, whose margin of 30.7% is below the portfolio average of 36.2%.",
+    "Replicate the sales routines of Samuel Duarte and benchmark the approach in Sudeste, the region with the strongest revenue concentration.",
+    "Monitor the latest rolling three-month trend of -2.7% to react faster to demand shifts and inventory planning changes."
+  ],
+  "series": {
+    "monthly_performance": [
+      {
+        "mes": "2023-01",
+        "receita": 42668145.06,
+        "lucro": 15293611.57,
+        "pedidos": 2086.0,
+        "itens": 15115.0,
+        "ticket_medio": 20454.53
+      },
+      {
+        "mes": "2023-02",
+        "receita": 38817723.45,
+        "lucro": 14031668.15,
+        "pedidos": 1873.0,
+        "itens": 13876.0,
+        "ticket_medio": 20724.89
+      },
+      {
+        "mes": "2023-03",
+        "receita": 45533553.35,
+        "lucro": 16619895.46,
+        "pedidos": 2162.0,
+        "itens": 15845.0,
+        "ticket_medio": 21060.85
+      },
+      {
+        "mes": "2023-04",
+        "receita": 43226509.78,
+        "lucro": 15651580.53,
+        "pedidos": 2061.0,
+        "itens": 15094.0,
+        "ticket_medio": 20973.56
+      },
+      {
+        "mes": "2023-05",
+        "receita": 41745962.37,
+        "lucro": 14990582.24,
+        "pedidos": 2090.0,
+        "itens": 14732.0,
+        "ticket_medio": 19974.14
+      },
+      {
+        "mes": "2023-06",
+        "receita": 41382938.34,
+        "lucro": 14930538.99,
+        "pedidos": 2052.0,
+        "itens": 14824.0,
+        "ticket_medio": 20167.12
+      },
+      {
+        "mes": "2023-07",
+        "receita": 43462990.24,
+        "lucro": 15818955.62,
+        "pedidos": 2143.0,
+        "itens": 15247.0,
+        "ticket_medio": 20281.38
+      },
+      {
+        "mes": "2023-08",
+        "receita": 43290580.1,
+        "lucro": 15692406.78,
+        "pedidos": 2195.0,
+        "itens": 15579.0,
+        "ticket_medio": 19722.36
+      },
+      {
+        "mes": "2023-09",
+        "receita": 44585869.4,
+        "lucro": 16171157.4,
+        "pedidos": 2057.0,
+        "itens": 15595.0,
+        "ticket_medio": 21675.19
+      },
+      {
+        "mes": "2023-10",
+        "receita": 41306153.98,
+        "lucro": 14860580.81,
+        "pedidos": 2109.0,
+        "itens": 14944.0,
+        "ticket_medio": 19585.66
+      },
+      {
+        "mes": "2023-11",
+        "receita": 42778315.13,
+        "lucro": 15409262.98,
+        "pedidos": 2116.0,
+        "itens": 15106.0,
+        "ticket_medio": 20216.6
+      },
+      {
+        "mes": "2023-12",
+        "receita": 43432930.37,
+        "lucro": 15633872.53,
+        "pedidos": 2076.0,
+        "itens": 15312.0,
+        "ticket_medio": 20921.45
+      },
+      {
+        "mes": "2024-01",
+        "receita": 44813682.8,
+        "lucro": 16294365.47,
+        "pedidos": 2124.0,
+        "itens": 15461.0,
+        "ticket_medio": 21098.72
+      },
+      {
+        "mes": "2024-02",
+        "receita": 39045667.16,
+        "lucro": 14141412.18,
+        "pedidos": 1948.0,
+        "itens": 14079.0,
+        "ticket_medio": 20043.98
+      },
+      {
+        "mes": "2024-03",
+        "receita": 45679418.06,
+        "lucro": 16409506.53,
+        "pedidos": 2214.0,
+        "itens": 16147.0,
+        "ticket_medio": 20632.08
+      },
+      {
+        "mes": "2024-04",
+        "receita": 39173733.53,
+        "lucro": 14437907.1,
+        "pedidos": 1998.0,
+        "itens": 13990.0,
+        "ticket_medio": 19606.47
+      },
+      {
+        "mes": "2024-05",
+        "receita": 43010227.28,
+        "lucro": 15617410.11,
+        "pedidos": 2101.0,
+        "itens": 15001.0,
+        "ticket_medio": 20471.31
+      },
+      {
+        "mes": "2024-06",
+        "receita": 42570484.72,
+        "lucro": 15406530.61,
+        "pedidos": 2087.0,
+        "itens": 14946.0,
+        "ticket_medio": 20397.93
+      },
+      {
+        "mes": "2024-07",
+        "receita": 44073459.6,
+        "lucro": 16033222.79,
+        "pedidos": 2152.0,
+        "itens": 15546.0,
+        "ticket_medio": 20480.23
+      },
+      {
+        "mes": "2024-08",
+        "receita": 43147593.76,
+        "lucro": 15710973.35,
+        "pedidos": 2150.0,
+        "itens": 15385.0,
+        "ticket_medio": 20068.65
+      },
+      {
+        "mes": "2024-09",
+        "receita": 42625299.43,
+        "lucro": 15627942.8,
+        "pedidos": 2019.0,
+        "itens": 15038.0,
+        "ticket_medio": 21112.08
+      },
+      {
+        "mes": "2024-10",
+        "receita": 42946111.01,
+        "lucro": 15362716.37,
+        "pedidos": 2094.0,
+        "itens": 15190.0,
+        "ticket_medio": 20509.13
+      },
+      {
+        "mes": "2024-11",
+        "receita": 41540584.2,
+        "lucro": 14942020.15,
+        "pedidos": 2060.0,
+        "itens": 15203.0,
+        "ticket_medio": 20165.33
+      },
+      {
+        "mes": "2024-12",
+        "receita": 41882913.04,
+        "lucro": 15149927.44,
+        "pedidos": 2033.0,
+        "itens": 14684.0,
+        "ticket_medio": 20601.53
+      }
+    ],
+    "quarterly_performance": [
+      {
+        "trimestre": "2023Q1",
+        "receita": 127019421.86,
+        "lucro": 45945175.18
+      },
+      {
+        "trimestre": "2023Q2",
+        "receita": 126355410.49,
+        "lucro": 45572701.76
+      },
+      {
+        "trimestre": "2023Q3",
+        "receita": 131339439.74,
+        "lucro": 47682519.8
+      },
+      {
+        "trimestre": "2023Q4",
+        "receita": 127517399.48,
+        "lucro": 45903716.32
+      },
+      {
+        "trimestre": "2024Q1",
+        "receita": 129538768.02,
+        "lucro": 46845284.18
+      },
+      {
+        "trimestre": "2024Q2",
+        "receita": 124754445.53,
+        "lucro": 45461847.82
+      },
+      {
+        "trimestre": "2024Q3",
+        "receita": 129846352.79,
+        "lucro": 47372138.94
+      },
+      {
+        "trimestre": "2024Q4",
+        "receita": 126369608.25,
+        "lucro": 45454663.96
+      }
+    ]
+  },
+  "tables": {
+    "category_performance": [
+      {
+        "categoria": "Livros",
+        "receita": 268194335.98,
+        "lucro": 99250999.93,
+        "volume": 85677.0,
+        "pedidos": 11787.0,
+        "margem_pct": 37.01,
+        "ticket_medio": 22753.4
+      },
+      {
+        "categoria": "Casa",
+        "receita": 229837678.61,
+        "lucro": 81265190.76,
+        "volume": 77965.0,
+        "pedidos": 10838.0,
+        "margem_pct": 35.36,
+        "ticket_medio": 21206.65
+      },
+      {
+        "categoria": "Informática",
+        "receita": 209439982.33,
+        "lucro": 64271207.15,
+        "volume": 71934.0,
+        "pedidos": 10037.0,
+        "margem_pct": 30.69,
+        "ticket_medio": 20866.79
+      },
+      {
+        "categoria": "Eletrônicos",
+        "receita": 204737688.06,
+        "lucro": 79604020.16,
+        "volume": 71794.0,
+        "pedidos": 9839.0,
+        "margem_pct": 38.88,
+        "ticket_medio": 20808.79
+      },
+      {
+        "categoria": "Vestuário",
+        "receita": 110531161.18,
+        "lucro": 45846629.96,
+        "volume": 54569.0,
+        "pedidos": 7499.0,
+        "margem_pct": 41.48,
+        "ticket_medio": 14739.45
+      }
+    ],
+    "region_performance": [
+      {
+        "regiao": "Sudeste",
+        "receita": 206560101.13,
+        "lucro": 74569505.03,
+        "pedidos": 10090.0,
+        "volume": 73151.0,
+        "margem_pct": 36.1
+      },
+      {
+        "regiao": "Norte",
+        "receita": 206004813.62,
+        "lucro": 75161563.95,
+        "pedidos": 10181.0,
+        "volume": 73475.0,
+        "margem_pct": 36.49
+      },
+      {
+        "regiao": "Sul",
+        "receita": 205108350.41,
+        "lucro": 74041354.07,
+        "pedidos": 9999.0,
+        "volume": 72067.0,
+        "margem_pct": 36.1
+      },
+      {
+        "regiao": "Centro-Oeste",
+        "receita": 203805961.66,
+        "lucro": 73594637.88,
+        "pedidos": 9908.0,
+        "volume": 71762.0,
+        "margem_pct": 36.11
+      },
+      {
+        "regiao": "Nordeste",
+        "receita": 201261619.34,
+        "lucro": 72870987.03,
+        "pedidos": 9822.0,
+        "volume": 71484.0,
+        "margem_pct": 36.21
+      }
+    ],
+    "top_products": [
+      {
+        "produto": "Ipsa vero",
+        "categoria": "Livros",
+        "receita": 35567035.88,
+        "lucro": 12137771.93,
+        "volume": 7141.0,
+        "pedidos": 931.0,
+        "margem_pct": 34.13
+      },
+      {
+        "produto": "Cum deleniti",
+        "categoria": "Livros",
+        "receita": 34866760.16,
+        "lucro": 7784720.8,
+        "volume": 7312.0,
+        "pedidos": 968.0,
+        "margem_pct": 22.33
+      },
+      {
+        "produto": "Velit ab",
+        "categoria": "Vestuário",
+        "receita": 34343265.16,
+        "lucro": 15746367.93,
+        "volume": 6887.0,
+        "pedidos": 892.0,
+        "margem_pct": 45.85
+      },
+      {
+        "produto": "Nihil officia",
+        "categoria": "Eletrônicos",
+        "receita": 32862947.52,
+        "lucro": 7768238.4,
+        "volume": 7072.0,
+        "pedidos": 931.0,
+        "margem_pct": 23.64
+      },
+      {
+        "produto": "Fuga cumque",
+        "categoria": "Casa",
+        "receita": 31590000.0,
+        "lucro": 8573890.0,
+        "volume": 6500.0,
+        "pedidos": 897.0,
+        "margem_pct": 27.14
+      },
+      {
+        "produto": "Impedit laboriosam",
+        "categoria": "Livros",
+        "receita": 30654898.13,
+        "lucro": 14539717.33,
+        "volume": 6473.0,
+        "pedidos": 896.0,
+        "margem_pct": 47.43
+      },
+      {
+        "produto": "Fone de Ouvido",
+        "categoria": "Eletrônicos",
+        "receita": 29960454.65,
+        "lucro": 14198800.56,
+        "volume": 6713.0,
+        "pedidos": 906.0,
+        "margem_pct": 47.39
+      },
+      {
+        "produto": "HD Externo",
+        "categoria": "Informática",
+        "receita": 29945424.6,
+        "lucro": 9416152.2,
+        "volume": 7215.0,
+        "pedidos": 959.0,
+        "margem_pct": 31.44
+      },
+      {
+        "produto": "Dignissimos asperiores",
+        "categoria": "Informática",
+        "receita": 29735970.36,
+        "lucro": 11305026.45,
+        "volume": 6621.0,
+        "pedidos": 882.0,
+        "margem_pct": 38.02
+      },
+      {
+        "produto": "Ad quisquam",
+        "categoria": "Livros",
+        "receita": 29379261.31,
+        "lucro": 11916120.26,
+        "volume": 6701.0,
+        "pedidos": 926.0,
+        "margem_pct": 40.56
+      }
+    ],
+    "top_sellers": [
+      {
+        "nome_vendedor": "Samuel Duarte",
+        "receita": 23302930.29,
+        "lucro": 8345667.25,
+        "pedidos": 1061.0,
+        "volume": 7959.0,
+        "ticket_medio": 21963.18
+      },
+      {
+        "nome_vendedor": "Dr. Bryan Nogueira",
+        "receita": 22738322.19,
+        "lucro": 8188957.22,
+        "pedidos": 1007.0,
+        "volume": 7616.0,
+        "ticket_medio": 22580.26
+      },
+      {
+        "nome_vendedor": "Eloah Garcia",
+        "receita": 22006451.99,
+        "lucro": 7951812.38,
+        "pedidos": 1029.0,
+        "volume": 7671.0,
+        "ticket_medio": 21386.25
+      },
+      {
+        "nome_vendedor": "Pedro Lucas Sá",
+        "receita": 21873512.28,
+        "lucro": 7879480.2,
+        "pedidos": 1047.0,
+        "volume": 7691.0,
+        "ticket_medio": 20891.61
+      },
+      {
+        "nome_vendedor": "Luiz Felipe Pacheco",
+        "receita": 21791431.16,
+        "lucro": 7873637.43,
+        "pedidos": 1054.0,
+        "volume": 7726.0,
+        "ticket_medio": 20674.98
+      },
+      {
+        "nome_vendedor": "Matteo Câmara",
+        "receita": 21697429.65,
+        "lucro": 7835904.89,
+        "pedidos": 1044.0,
+        "volume": 7830.0,
+        "ticket_medio": 20782.98
+      },
+      {
+        "nome_vendedor": "Luigi Guerra",
+        "receita": 21636058.22,
+        "lucro": 8000422.65,
+        "pedidos": 1015.0,
+        "volume": 7637.0,
+        "ticket_medio": 21316.31
+      },
+      {
+        "nome_vendedor": "Maria Liz Pires",
+        "receita": 21591350.57,
+        "lucro": 8012383.82,
+        "pedidos": 1046.0,
+        "volume": 7545.0,
+        "ticket_medio": 20641.83
+      },
+      {
+        "nome_vendedor": "Ana Júlia Albuquerque",
+        "receita": 21516721.94,
+        "lucro": 7878080.79,
+        "pedidos": 1050.0,
+        "volume": 7678.0,
+        "ticket_medio": 20492.12
+      },
+      {
+        "nome_vendedor": "Antonella Santos",
+        "receita": 21515736.82,
+        "lucro": 7734747.96,
+        "pedidos": 1019.0,
+        "volume": 7346.0,
+        "ticket_medio": 21114.56
+      }
+    ],
+    "highest_margin_category": {
+      "categoria": "Vestuário",
+      "margem_pct": 41.48
+    }
+  }
+}
