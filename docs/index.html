@@ -1,219 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Analysis and Business Intelligence Dashboard</title>
+    <title>Dalumia Consultoria | Portfolio Profissional de Data Analytics</title>
     <meta
       name="description"
-      content="Portfolio project focused on sales analytics, KPI tracking and business intelligence storytelling."
+      content="Portfolio profissional da Dalumia Consultoria com projetos de Data Analytics, BI e otimizacao de processos administrativos."
     />
-      <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Sora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="assets/app.js" defer></script>
+    <link rel="stylesheet" href="assets/portfolio.css" />
   </head>
   <body>
-    <div class="background-orb orb-one"></div>
-    <div class="background-orb orb-two"></div>
-    <div class="page-shell">
-      <header class="hero reveal">
-        <p class="eyebrow">Portfolio Project • Business Intelligence</p>
-        <div class="hero-grid">
-          <div>
-            <h1 id="project-title">Data Analysis and Business Intelligence Dashboard</h1>
-            <p id="project-subtitle" class="hero-copy">
-              Turning raw sales records into KPI monitoring, executive reporting and strategic recommendations.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="#dashboard">Explore dashboard</a>
-              <a class="button secondary" href="#methodology">See methodology</a>
-            </div>
-          </div>
-          <div class="hero-panel">
-            <p class="panel-label">Project snapshot</p>
-            <dl class="project-meta">
-              <div>
-                <dt>Records</dt>
-                <dd id="meta-records">Loading...</dd>
-              </div>
-              <div>
-                <dt>Period</dt>
-                <dd id="meta-period">Loading...</dd>
-              </div>
-              <div>
-                <dt>Products</dt>
-                <dd id="meta-products">Loading...</dd>
-              </div>
-              <div>
-                <dt>Sellers</dt>
-                <dd id="meta-sellers">Loading...</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
+    <div class="page">
+      <header class="topbar">
+        <a class="brand" href="index.html">Dalumia Consultoria</a>
+        <nav>
+          <a class="nav-link" href="#projetos">Projetos</a>
+          <a class="nav-link" href="#metodologia">Metodologia</a>
+          <a class="nav-link" href="https://github.com/saraa452/portifolio_amostra" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
       </header>
 
-      <main id="dashboard">
-        <section class="kpi-grid reveal" id="kpi-grid"></section>
-
-        <section class="insight-grid reveal">
-          <article class="story-card">
-            <p class="panel-label">Executive summary</p>
-            <h2>Business context</h2>
-            <p id="project-description" class="story-copy">
-              This project translates raw sales data into an executive-ready business intelligence narrative.
+      <section class="hero">
+        <p class="eyebrow">Portfolio Profissional • Data Analytics</p>
+        <div class="hero-grid">
+          <div>
+            <h1>Business Intelligence and Data Analytics Portfolio</h1>
+            <p class="hero-copy">
+              Projetos aplicados para transformar dados em visibilidade de negocio, governanca operacional e tomada de decisao orientada por indicadores.
             </p>
-            <div id="scope-list" class="scope-list"></div>
-          </article>
-          <article class="story-card">
-            <p class="panel-label">Actionable insights</p>
-            <h2>What stands out</h2>
-            <div id="highlights" class="highlight-list"></div>
-          </article>
-        </section>
-
-        <section class="recommendation-panel reveal">
-          <div class="panel-headline">
-            <div>
-              <p class="panel-label">Decision support</p>
-              <h2>Recommendations based on KPI monitoring</h2>
+            <div class="hero-actions">
+              <a class="button primary" href="#projetos">Ver projetos</a>
+              <a class="button secondary" href="https://github.com/saraa452/portifolio_amostra" target="_blank" rel="noreferrer">Abrir repositorio</a>
             </div>
-            <p class="panel-copy">
-              Practical actions extracted from the sales dataset to improve growth, profitability and commercial execution.
-            </p>
           </div>
-          <ul id="recommendations" class="recommendation-list"></ul>
-        </section>
+          <aside class="hero-panel">
+            <dl>
+              <div>
+                <dt>Nome profissional</dt>
+                <dd>Dalumia Consultoria</dd>
+              </div>
+              <div>
+                <dt>Area de atuacao</dt>
+                <dd>Data Analytics e BI</dd>
+              </div>
+              <div>
+                <dt>Projetos ativos</dt>
+                <dd>2 case studies publicados</dd>
+              </div>
+              <div>
+                <dt>Plataforma</dt>
+                <dd>GitHub Pages</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
 
-        <section class="chart-grid reveal">
-          <article class="panel panel-wide">
-            <div class="panel-headline compact">
-              <div>
-                <p class="panel-label">Time series</p>
-                <h2>Revenue and profit by month</h2>
-              </div>
-            </div>
-            <canvas id="monthlyChart"></canvas>
-          </article>
-          <article class="panel">
-            <div class="panel-headline compact">
-              <div>
-                <p class="panel-label">Category mix</p>
-                <h2>Revenue by category</h2>
-              </div>
-            </div>
-            <canvas id="categoryChart"></canvas>
-          </article>
-          <article class="panel">
-            <div class="panel-headline compact">
-              <div>
-                <p class="panel-label">Regional view</p>
-                <h2>Profit margin by region</h2>
-              </div>
-            </div>
-            <canvas id="regionChart"></canvas>
-          </article>
-          <article class="panel panel-wide">
-            <div class="panel-headline compact">
-              <div>
-                <p class="panel-label">Commercial productivity</p>
-                <h2>Top sellers by revenue</h2>
-              </div>
-            </div>
-            <canvas id="sellerChart"></canvas>
-          </article>
-        </section>
+      <section class="section" id="projetos">
+        <div class="section-head">
+          <p class="section-eyebrow">Projetos</p>
+          <h2>Cases de Data Analytics</h2>
+          <p class="panel-copy">
+            Cada projeto foi organizado em pagina propria, com contexto de negocio, metodologia e dashboards para leitura executiva.
+          </p>
+        </div>
 
-        <section class="table-grid reveal">
-          <article class="panel">
-            <div class="panel-headline compact">
-              <div>
-                <p class="panel-label">Product performance</p>
-                <h2>Top products</h2>
-              </div>
-            </div>
-            <div class="table-shell">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Product</th>
-                    <th>Category</th>
-                    <th>Revenue</th>
-                    <th>Margin</th>
-                  </tr>
-                </thead>
-                <tbody id="productsTable"></tbody>
-              </table>
-            </div>
-          </article>
-          <article class="panel">
-            <div class="panel-headline compact">
-              <div>
-                <p class="panel-label">Portfolio view</p>
-                <h2>Category performance</h2>
-              </div>
-            </div>
-            <div class="table-shell">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Category</th>
-                    <th>Revenue</th>
-                    <th>Profit</th>
-                    <th>Margin</th>
-                  </tr>
-                </thead>
-                <tbody id="categoriesTable"></tbody>
-              </table>
-            </div>
-          </article>
-        </section>
-
-        <section class="method-grid reveal" id="methodology">
-          <article class="story-card">
-            <p class="panel-label">Methodology</p>
-            <h2>How the project was built</h2>
-            <p class="story-copy">
-              The workflow starts with structured sales records, applies aggregation logic in Python and delivers a static, shareable dashboard for portfolio presentation.
+        <div class="projects-grid">
+          <article class="project-card">
+            <p class="project-tag">Project 01</p>
+            <h3>Business Data Analysis and Reporting</h3>
+            <p class="project-copy">
+              Designed and implemented a data analysis project aimed at improving business visibility through structured reporting and dashboards. Collected and processed datasets, performed exploratory data analysis and developed visual reports to support decision-making.
             </p>
-            <div class="method-cards">
-              <div>
-                <h3>1. Data preparation</h3>
-                <p>Standardized dates, validated metrics and aggregated KPIs by month, category, region, product and seller.</p>
-              </div>
-              <div>
-                <h3>2. Business analysis</h3>
-                <p>Identified revenue concentration, profitability patterns and operational opportunities from the commercial data.</p>
-              </div>
-              <div>
-                <h3>3. Storytelling layer</h3>
-                <p>Converted the analysis into an executive dashboard designed for GitHub Pages and portfolio visibility.</p>
-              </div>
-            </div>
-          </article>
-          <article class="story-card">
-            <p class="panel-label">Stack</p>
-            <h2>Tools used in the project</h2>
-            <ul class="stack-list">
-              <li>Python and pandas for aggregation and KPI generation</li>
-              <li>Chart.js for interactive data visualization</li>
-              <li>HTML, CSS and JavaScript for the public-facing dashboard</li>
-              <li>GitHub Pages as the deployment layer for the portfolio</li>
+            <ul>
+              <li>KPI monitoring by revenue, profit, categories, regions and sellers</li>
+              <li>Time-series analysis and performance trend identification</li>
+              <li>Actionable recommendations for operational strategy</li>
             </ul>
-            <div class="generated-at">
-              <span>Last data refresh</span>
-              <strong id="generatedAt">Loading...</strong>
-            </div>
+            <dl class="project-meta">
+              <div>
+                <dt>Dataset</dt>
+                <dd>Sales transactions</dd>
+              </div>
+              <div>
+                <dt>Output</dt>
+                <dd>BI dashboard and reporting</dd>
+              </div>
+            </dl>
+            <a class="button primary" href="projetos/business-data-analysis-reporting.html">Abrir pagina do projeto</a>
           </article>
-        </section>
-      </main>
+
+          <article class="project-card">
+            <p class="project-tag">Project 02</p>
+            <h3>Administrative Process Optimization</h3>
+            <p class="project-copy">
+              Led a project focused on improving administrative workflows and operational efficiency. Analyzed internal processes, identified inefficiencies and implemented structured reporting systems to support monitoring and decision-making.
+            </p>
+            <ul>
+              <li>Approval rate, backlog, and process value monitoring</li>
+              <li>Bottleneck detection by department and workflow status</li>
+              <li>Data-driven actions for governance and transparency</li>
+            </ul>
+            <dl class="project-meta">
+              <div>
+                <dt>Dataset</dt>
+                <dd>Administrative workflows</dd>
+              </div>
+              <div>
+                <dt>Output</dt>
+                <dd>Operational analytics dashboard</dd>
+              </div>
+            </dl>
+            <a class="button primary" href="projetos/administrative-process-optimization.html">Abrir pagina do projeto</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="metodologia">
+        <div class="section-head">
+          <p class="section-eyebrow">Posicionamento</p>
+          <h2>Abordagem profissional para Data Analytics</h2>
+        </div>
+        <div class="value-grid">
+          <article class="value-card">
+            <h3>Business context first</h3>
+            <p>Cada dashboard nasce de uma pergunta de negocio clara, com indicadores alinhados a decisao executiva.</p>
+          </article>
+          <article class="value-card">
+            <h3>Structured reporting</h3>
+            <p>Transformacao de dados em relatorios padronizados, consistentes e replicaveis para rotina de gestao.</p>
+          </article>
+          <article class="value-card">
+            <h3>Actionable insights</h3>
+            <p>As analises vao alem da visualizacao e entregam recomendacoes para performance e eficiencia operacional.</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Dalumia Consultoria • Portfolio profissional de Data Analytics</p>
+        <a href="https://github.com/saraa452/portifolio_amostra" target="_blank" rel="noreferrer">github.com/saraa452/portifolio_amostra</a>
+      </footer>
     </div>
   </body>
 </html>

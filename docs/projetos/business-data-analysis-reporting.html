@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Data Analysis and Reporting | Dalumia Consultoria</title>
+    <meta
+      name="description"
+      content="Business Data Analysis and Reporting project with KPI dashboards and strategic recommendations."
+    />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/app.js" defer></script>
+  </head>
+  <body data-dashboard-data-path="../data/sales_dashboard.json">
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+    <div class="page-shell">
+      <nav class="site-topbar reveal">
+        <a class="brand-link" href="../index.html">Dalumia Consultoria</a>
+        <a class="button secondary small" href="../index.html">Back to portfolio</a>
+      </nav>
+
+      <header class="hero reveal">
+        <p class="eyebrow">Project 01 • Business Data Analysis and Reporting</p>
+        <div class="hero-grid">
+          <div>
+            <h1 id="project-title">Data Analysis and Business Intelligence Dashboard</h1>
+            <p id="project-subtitle" class="hero-copy">
+              Turning raw sales records into KPI monitoring, executive reporting and strategic recommendations.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#dashboard">Explore dashboard</a>
+              <a class="button secondary" href="#methodology">See methodology</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <p class="panel-label">Project snapshot</p>
+            <dl class="project-meta">
+              <div>
+                <dt>Records</dt>
+                <dd id="meta-records">Loading...</dd>
+              </div>
+              <div>
+                <dt>Period</dt>
+                <dd id="meta-period">Loading...</dd>
+              </div>
+              <div>
+                <dt>Products</dt>
+                <dd id="meta-products">Loading...</dd>
+              </div>
+              <div>
+                <dt>Sellers</dt>
+                <dd id="meta-sellers">Loading...</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </header>
+
+      <main id="dashboard">
+        <section class="kpi-grid reveal" id="kpi-grid"></section>
+
+        <section class="insight-grid reveal">
+          <article class="story-card">
+            <p class="panel-label">Executive summary</p>
+            <h2>Business context</h2>
+            <p id="project-description" class="story-copy">
+              This project translates raw sales data into an executive-ready business intelligence narrative.
+            </p>
+            <div id="scope-list" class="scope-list"></div>
+          </article>
+          <article class="story-card">
+            <p class="panel-label">Actionable insights</p>
+            <h2>What stands out</h2>
+            <div id="highlights" class="highlight-list"></div>
+          </article>
+        </section>
+
+        <section class="recommendation-panel reveal">
+          <div class="panel-headline">
+            <div>
+              <p class="panel-label">Decision support</p>
+              <h2>Recommendations based on KPI monitoring</h2>
+            </div>
+            <p class="panel-copy">
+              Practical actions extracted from the sales dataset to improve growth, profitability and commercial execution.
+            </p>
+          </div>
+          <ul id="recommendations" class="recommendation-list"></ul>
+        </section>
+
+        <section class="chart-grid reveal">
+          <article class="panel panel-wide">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Time series</p>
+                <h2>Revenue and profit by month</h2>
+              </div>
+            </div>
+            <canvas id="monthlyChart"></canvas>
+          </article>
+          <article class="panel">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Category mix</p>
+                <h2>Revenue by category</h2>
+              </div>
+            </div>
+            <canvas id="categoryChart"></canvas>
+          </article>
+          <article class="panel">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Regional view</p>
+                <h2>Profit margin by region</h2>
+              </div>
+            </div>
+            <canvas id="regionChart"></canvas>
+          </article>
+          <article class="panel panel-wide">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Commercial productivity</p>
+                <h2>Top sellers by revenue</h2>
+              </div>
+            </div>
+            <canvas id="sellerChart"></canvas>
+          </article>
+        </section>
+
+        <section class="table-grid reveal">
+          <article class="panel">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Product performance</p>
+                <h2>Top products</h2>
+              </div>
+            </div>
+            <div class="table-shell">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Revenue</th>
+                    <th>Margin</th>
+                  </tr>
+                </thead>
+                <tbody id="productsTable"></tbody>
+              </table>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Portfolio view</p>
+                <h2>Category performance</h2>
+              </div>
+            </div>
+            <div class="table-shell">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Revenue</th>
+                    <th>Profit</th>
+                    <th>Margin</th>
+                  </tr>
+                </thead>
+                <tbody id="categoriesTable"></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <section class="method-grid reveal" id="methodology">
+          <article class="story-card">
+            <p class="panel-label">Methodology</p>
+            <h2>How the project was built</h2>
+            <p class="story-copy">
+              The workflow starts with structured sales records, applies aggregation logic in Python and delivers a static, shareable dashboard for portfolio presentation.
+            </p>
+            <div class="method-cards">
+              <div>
+                <h3>1. Data preparation</h3>
+                <p>Standardized dates, validated metrics and aggregated KPIs by month, category, region, product and seller.</p>
+              </div>
+              <div>
+                <h3>2. Business analysis</h3>
+                <p>Identified revenue concentration, profitability patterns and operational opportunities from the commercial data.</p>
+              </div>
+              <div>
+                <h3>3. Storytelling layer</h3>
+                <p>Converted the analysis into an executive dashboard designed for GitHub Pages and portfolio visibility.</p>
+              </div>
+            </div>
+          </article>
+          <article class="story-card">
+            <p class="panel-label">Stack</p>
+            <h2>Tools used in the project</h2>
+            <ul class="stack-list">
+              <li>Python and pandas for aggregation and KPI generation</li>
+              <li>Chart.js for interactive data visualization</li>
+              <li>HTML, CSS and JavaScript for the public-facing dashboard</li>
+              <li>GitHub Pages as the deployment layer for the portfolio</li>
+            </ul>
+            <div class="generated-at">
+              <span>Last data refresh</span>
+              <strong id="generatedAt">Loading...</strong>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,778 @@
+{
+  "project": {
+    "title": "Administrative Process Optimization",
+    "subtitle": "Improving workflow visibility and operational governance through structured analytics.",
+    "description": "This project analyzes internal administrative workflows to identify inefficiencies, monitor approval performance and support decision-making through data-driven reporting.",
+    "scope": [
+      "50,000 administrative process records",
+      "Coverage from 2023 to 2024",
+      "Monitoring by status, department, approver and contract type",
+      "Executive reporting focused on operational transparency"
+    ]
+  },
+  "meta": {
+    "generated_at": "2026-03-10T16:19:36.004618+00:00",
+    "records": 50000,
+    "period_start": "2023-01-01",
+    "period_end": "2024-12-30",
+    "departments": 7,
+    "approvers": 20
+  },
+  "kpis": {
+    "valor_total_processos": 12533774294.32,
+    "valor_aprovado": 8767029835.7,
+    "taxa_aprovacao_pct": 69.99,
+    "tempo_medio_aprovacao_dias": 15.56,
+    "processos_aprovados": 34996,
+    "processos_pendentes": 7561,
+    "processos_rejeitados_cancelados": 7443
+  },
+  "highlights": [
+    {
+      "title": "Highest approval month",
+      "metric": "2024-02",
+      "description": "Approval rate reached 74.4% with 1856 processes and R$ 352,866,644 approved value."
+    },
+    {
+      "title": "Largest administrative pipeline",
+      "metric": "Operações",
+      "description": "This department handled R$ 1,804,706,498 across 7127 processes."
+    },
+    {
+      "title": "Best operational conversion",
+      "metric": "Marketing",
+      "description": "Approval efficiency reached 70.4% with an average of 15.6 days."
+    }
+  ],
+  "recommendations": [
+    "Prioritize pending processes totaling R$ 1,908,725,648 with weekly review routines and SLA checkpoints for each department.",
+    "Create recovery plans for rejected and canceled workflows currently representing R$ 1,858,018,810 in blocked pipeline value.",
+    "Replicate the approval routines of Marketing across the other administrative areas to improve conversion and cycle time.",
+    "Implement root-cause analysis in Operações, the area with the highest value at risk (R$ 553,791,229)."
+  ],
+  "series": {
+    "monthly_pipeline": [
+      {
+        "mes": "2023-01",
+        "processos": 2040.0,
+        "valor_total": 527462455.63,
+        "valor_aprovado": 387692137.77,
+        "aprovados": 1499.0,
+        "pendentes": 218.0,
+        "rejeitados_cancelados": 323.0,
+        "tempo_medio_aprovacao_dias": 15.45,
+        "taxa_aprovacao_pct": 73.48
+      },
+      {
+        "mes": "2023-02",
+        "processos": 1838.0,
+        "valor_total": 458578918.48,
+        "valor_aprovado": 326736491.87,
+        "aprovados": 1315.0,
+        "pendentes": 213.0,
+        "rejeitados_cancelados": 310.0,
+        "tempo_medio_aprovacao_dias": 15.27,
+        "taxa_aprovacao_pct": 71.55
+      },
+      {
+        "mes": "2023-03",
+        "processos": 2104.0,
+        "valor_total": 516826425.55,
+        "valor_aprovado": 380763092.29,
+        "aprovados": 1562.0,
+        "pendentes": 204.0,
+        "rejeitados_cancelados": 338.0,
+        "tempo_medio_aprovacao_dias": 15.86,
+        "taxa_aprovacao_pct": 74.24
+      },
+      {
+        "mes": "2023-04",
+        "processos": 1919.0,
+        "valor_total": 476992462.53,
+        "valor_aprovado": 347956986.86,
+        "aprovados": 1393.0,
+        "pendentes": 224.0,
+        "rejeitados_cancelados": 302.0,
+        "tempo_medio_aprovacao_dias": 15.61,
+        "taxa_aprovacao_pct": 72.59
+      },
+      {
+        "mes": "2023-05",
+        "processos": 2036.0,
+        "valor_total": 502176952.85,
+        "valor_aprovado": 363244214.59,
+        "aprovados": 1471.0,
+        "pendentes": 250.0,
+        "rejeitados_cancelados": 315.0,
+        "tempo_medio_aprovacao_dias": 15.39,
+        "taxa_aprovacao_pct": 72.25
+      },
+      {
+        "mes": "2023-06",
+        "processos": 1971.0,
+        "valor_total": 496333455.99,
+        "valor_aprovado": 363746736.15,
+        "aprovados": 1449.0,
+        "pendentes": 233.0,
+        "rejeitados_cancelados": 289.0,
+        "tempo_medio_aprovacao_dias": 15.62,
+        "taxa_aprovacao_pct": 73.52
+      },
+      {
+        "mes": "2023-07",
+        "processos": 2072.0,
+        "valor_total": 516271474.23,
+        "valor_aprovado": 372403546.62,
+        "aprovados": 1503.0,
+        "pendentes": 224.0,
+        "rejeitados_cancelados": 345.0,
+        "tempo_medio_aprovacao_dias": 15.65,
+        "taxa_aprovacao_pct": 72.54
+      },
+      {
+        "mes": "2023-08",
+        "processos": 1951.0,
+        "valor_total": 499674741.4,
+        "valor_aprovado": 371886945.87,
+        "aprovados": 1434.0,
+        "pendentes": 201.0,
+        "rejeitados_cancelados": 316.0,
+        "tempo_medio_aprovacao_dias": 15.55,
+        "taxa_aprovacao_pct": 73.5
+      },
+      {
+        "mes": "2023-09",
+        "processos": 1887.0,
+        "valor_total": 470750250.86,
+        "valor_aprovado": 350451315.63,
+        "aprovados": 1400.0,
+        "pendentes": 198.0,
+        "rejeitados_cancelados": 289.0,
+        "tempo_medio_aprovacao_dias": 15.24,
+        "taxa_aprovacao_pct": 74.19
+      },
+      {
+        "mes": "2023-10",
+        "processos": 2095.0,
+        "valor_total": 523536730.22,
+        "valor_aprovado": 377105212.04,
+        "aprovados": 1506.0,
+        "pendentes": 259.0,
+        "rejeitados_cancelados": 330.0,
+        "tempo_medio_aprovacao_dias": 15.65,
+        "taxa_aprovacao_pct": 71.89
+      },
+      {
+        "mes": "2023-11",
+        "processos": 1913.0,
+        "valor_total": 480273158.78,
+        "valor_aprovado": 354290770.17,
+        "aprovados": 1411.0,
+        "pendentes": 208.0,
+        "rejeitados_cancelados": 294.0,
+        "tempo_medio_aprovacao_dias": 15.54,
+        "taxa_aprovacao_pct": 73.76
+      },
+      {
+        "mes": "2023-12",
+        "processos": 2078.0,
+        "valor_total": 523443060.59,
+        "valor_aprovado": 374932512.68,
+        "aprovados": 1498.0,
+        "pendentes": 262.0,
+        "rejeitados_cancelados": 318.0,
+        "tempo_medio_aprovacao_dias": 15.85,
+        "taxa_aprovacao_pct": 72.09
+      },
+      {
+        "mes": "2024-01",
+        "processos": 2052.0,
+        "valor_total": 511225108.93,
+        "valor_aprovado": 373514647.35,
+        "aprovados": 1494.0,
+        "pendentes": 251.0,
+        "rejeitados_cancelados": 307.0,
+        "tempo_medio_aprovacao_dias": 15.56,
+        "taxa_aprovacao_pct": 72.81
+      },
+      {
+        "mes": "2024-02",
+        "processos": 1856.0,
+        "valor_total": 470845983.02,
+        "valor_aprovado": 352866644.25,
+        "aprovados": 1381.0,
+        "pendentes": 205.0,
+        "rejeitados_cancelados": 270.0,
+        "tempo_medio_aprovacao_dias": 15.5,
+        "taxa_aprovacao_pct": 74.41
+      },
+      {
+        "mes": "2024-03",
+        "processos": 2037.0,
+        "valor_total": 520345102.58,
+        "valor_aprovado": 382879096.68,
+        "aprovados": 1515.0,
+        "pendentes": 208.0,
+        "rejeitados_cancelados": 314.0,
+        "tempo_medio_aprovacao_dias": 15.71,
+        "taxa_aprovacao_pct": 74.37
+      },
+      {
+        "mes": "2024-04",
+        "processos": 1994.0,
+        "valor_total": 498884047.67,
+        "valor_aprovado": 365117596.08,
+        "aprovados": 1466.0,
+        "pendentes": 224.0,
+        "rejeitados_cancelados": 304.0,
+        "tempo_medio_aprovacao_dias": 15.41,
+        "taxa_aprovacao_pct": 73.52
+      },
+      {
+        "mes": "2024-05",
+        "processos": 1998.0,
+        "valor_total": 499885253.85,
+        "valor_aprovado": 362257380.21,
+        "aprovados": 1451.0,
+        "pendentes": 225.0,
+        "rejeitados_cancelados": 322.0,
+        "tempo_medio_aprovacao_dias": 15.73,
+        "taxa_aprovacao_pct": 72.62
+      },
+      {
+        "mes": "2024-06",
+        "processos": 2045.0,
+        "valor_total": 514785714.88,
+        "valor_aprovado": 377317670.95,
+        "aprovados": 1504.0,
+        "pendentes": 223.0,
+        "rejeitados_cancelados": 318.0,
+        "tempo_medio_aprovacao_dias": 15.47,
+        "taxa_aprovacao_pct": 73.55
+      },
+      {
+        "mes": "2024-07",
+        "processos": 2048.0,
+        "valor_total": 507870235.81,
+        "valor_aprovado": 374694146.93,
+        "aprovados": 1504.0,
+        "pendentes": 236.0,
+        "rejeitados_cancelados": 308.0,
+        "tempo_medio_aprovacao_dias": 15.62,
+        "taxa_aprovacao_pct": 73.44
+      },
+      {
+        "mes": "2024-08",
+        "processos": 1967.0,
+        "valor_total": 476989421.67,
+        "valor_aprovado": 347612771.62,
+        "aprovados": 1428.0,
+        "pendentes": 231.0,
+        "rejeitados_cancelados": 308.0,
+        "tempo_medio_aprovacao_dias": 15.66,
+        "taxa_aprovacao_pct": 72.6
+      },
+      {
+        "mes": "2024-09",
+        "processos": 1974.0,
+        "valor_total": 500116583.33,
+        "valor_aprovado": 365341479.34,
+        "aprovados": 1450.0,
+        "pendentes": 225.0,
+        "rejeitados_cancelados": 299.0,
+        "tempo_medio_aprovacao_dias": 15.21,
+        "taxa_aprovacao_pct": 73.45
+      },
+      {
+        "mes": "2024-10",
+        "processos": 4146.0,
+        "valor_total": 1050151652.75,
+        "valor_aprovado": 374161420.46,
+        "aprovados": 1483.0,
+        "pendentes": 2328.0,
+        "rejeitados_cancelados": 335.0,
+        "tempo_medio_aprovacao_dias": 15.65,
+        "taxa_aprovacao_pct": 35.77
+      },
+      {
+        "mes": "2024-11",
+        "processos": 1991.0,
+        "valor_total": 499823092.79,
+        "valor_aprovado": 364491161.42,
+        "aprovados": 1446.0,
+        "pendentes": 274.0,
+        "rejeitados_cancelados": 271.0,
+        "tempo_medio_aprovacao_dias": 15.61,
+        "taxa_aprovacao_pct": 72.63
+      },
+      {
+        "mes": "2024-12",
+        "processos": 1988.0,
+        "valor_total": 490532009.93,
+        "valor_aprovado": 355565857.87,
+        "aprovados": 1433.0,
+        "pendentes": 237.0,
+        "rejeitados_cancelados": 318.0,
+        "tempo_medio_aprovacao_dias": 15.5,
+        "taxa_aprovacao_pct": 72.08
+      }
+    ],
+    "status_distribution": [
+      {
+        "status": "Aprovado",
+        "quantidade": 34996.0,
+        "valor_total": 8767029835.7
+      },
+      {
+        "status": "Pendente",
+        "quantidade": 7561.0,
+        "valor_total": 1908725648.12
+      },
+      {
+        "status": "Rejeitado",
+        "quantidade": 4909.0,
+        "valor_total": 1231466452.21
+      },
+      {
+        "status": "Cancelado",
+        "quantidade": 2534.0,
+        "valor_total": 626552358.29
+      }
+    ],
+    "department_performance": [
+      {
+        "departamento": "Operações",
+        "processos": 7127.0,
+        "valor_total": 1804706497.81,
+        "valor_aprovado": 1250915269.02,
+        "aprovados": 4941.0,
+        "pendentes": 1097.0,
+        "rejeitados_cancelados": 1089.0,
+        "tempo_medio_aprovacao_dias": 15.3,
+        "taxa_aprovacao_pct": 69.33
+      },
+      {
+        "departamento": "Jurídico",
+        "processos": 7236.0,
+        "valor_total": 1801089839.03,
+        "valor_aprovado": 1260628332.49,
+        "aprovados": 5074.0,
+        "pendentes": 1095.0,
+        "rejeitados_cancelados": 1067.0,
+        "tempo_medio_aprovacao_dias": 15.55,
+        "taxa_aprovacao_pct": 70.12
+      },
+      {
+        "departamento": "TI",
+        "processos": 7073.0,
+        "valor_total": 1798473010.52,
+        "valor_aprovado": 1257763689.43,
+        "aprovados": 4947.0,
+        "pendentes": 1093.0,
+        "rejeitados_cancelados": 1033.0,
+        "tempo_medio_aprovacao_dias": 15.69,
+        "taxa_aprovacao_pct": 69.94
+      },
+      {
+        "departamento": "RH",
+        "processos": 7225.0,
+        "valor_total": 1796314526.2,
+        "valor_aprovado": 1257433442.48,
+        "aprovados": 5080.0,
+        "pendentes": 1101.0,
+        "rejeitados_cancelados": 1044.0,
+        "tempo_medio_aprovacao_dias": 15.61,
+        "taxa_aprovacao_pct": 70.31
+      },
+      {
+        "departamento": "Financeiro",
+        "processos": 7178.0,
+        "valor_total": 1790612649.04,
+        "valor_aprovado": 1246579691.89,
+        "aprovados": 5021.0,
+        "pendentes": 1071.0,
+        "rejeitados_cancelados": 1086.0,
+        "tempo_medio_aprovacao_dias": 15.69,
+        "taxa_aprovacao_pct": 69.95
+      },
+      {
+        "departamento": "Marketing",
+        "processos": 7122.0,
+        "valor_total": 1783663221.85,
+        "valor_aprovado": 1263205983.33,
+        "aprovados": 5016.0,
+        "pendentes": 1061.0,
+        "rejeitados_cancelados": 1045.0,
+        "tempo_medio_aprovacao_dias": 15.61,
+        "taxa_aprovacao_pct": 70.43
+      },
+      {
+        "departamento": "Compras",
+        "processos": 7039.0,
+        "valor_total": 1758914549.87,
+        "valor_aprovado": 1230503427.06,
+        "aprovados": 4917.0,
+        "pendentes": 1043.0,
+        "rejeitados_cancelados": 1079.0,
+        "tempo_medio_aprovacao_dias": 15.45,
+        "taxa_aprovacao_pct": 69.85
+      }
+    ],
+    "contract_type_mix": [
+      {
+        "tipo_contrato": "Software",
+        "processos": 8437.0,
+        "valor_total": 2119477870.8,
+        "valor_aprovado": 1483687306.21,
+        "aprovados": 5907.0,
+        "taxa_aprovacao_pct": 70.01
+      },
+      {
+        "tipo_contrato": "Evento",
+        "processos": 8381.0,
+        "valor_total": 2109121462.85,
+        "valor_aprovado": 1473330873.68,
+        "aprovados": 5862.0,
+        "taxa_aprovacao_pct": 69.94
+      },
+      {
+        "tipo_contrato": "Fornecedor",
+        "processos": 8386.0,
+        "valor_total": 2107688968.66,
+        "valor_aprovado": 1462748423.45,
+        "aprovados": 5846.0,
+        "taxa_aprovacao_pct": 69.71
+      },
+      {
+        "tipo_contrato": "Consultoria",
+        "processos": 8306.0,
+        "valor_total": 2090032451.14,
+        "valor_aprovado": 1455227048.49,
+        "aprovados": 5824.0,
+        "taxa_aprovacao_pct": 70.12
+      },
+      {
+        "tipo_contrato": "Prestação de Serviços",
+        "processos": 8233.0,
+        "valor_total": 2054484529.89,
+        "valor_aprovado": 1455898398.4,
+        "aprovados": 5772.0,
+        "taxa_aprovacao_pct": 70.11
+      },
+      {
+        "tipo_contrato": "Treinamento",
+        "processos": 8257.0,
+        "valor_total": 2052969010.98,
+        "valor_aprovado": 1436137785.47,
+        "aprovados": 5785.0,
+        "taxa_aprovacao_pct": 70.06
+      }
+    ],
+    "top_approvers": [
+      {
+        "aprovador": "Asafe Cardoso",
+        "processos_aprovados": 1821.0,
+        "valor_aprovado": 459306104.36,
+        "tempo_medio_aprovacao_dias": 15.53
+      },
+      {
+        "aprovador": "Sr. Theodoro Macedo",
+        "processos_aprovados": 1775.0,
+        "valor_aprovado": 456176695.63,
+        "tempo_medio_aprovacao_dias": 15.85
+      },
+      {
+        "aprovador": "Cecilia Alves",
+        "processos_aprovados": 1798.0,
+        "valor_aprovado": 454520655.68,
+        "tempo_medio_aprovacao_dias": 15.67
+      },
+      {
+        "aprovador": "Srta. Ana Lívia Monteiro",
+        "processos_aprovados": 1784.0,
+        "valor_aprovado": 449192310.09,
+        "tempo_medio_aprovacao_dias": 15.52
+      },
+      {
+        "aprovador": "Isadora Moraes",
+        "processos_aprovados": 1817.0,
+        "valor_aprovado": 447931126.17,
+        "tempo_medio_aprovacao_dias": 15.4
+      },
+      {
+        "aprovador": "Luiz Fernando Fogaça",
+        "processos_aprovados": 1772.0,
+        "valor_aprovado": 446952357.51,
+        "tempo_medio_aprovacao_dias": 15.62
+      },
+      {
+        "aprovador": "Pedro Henrique Nunes",
+        "processos_aprovados": 1743.0,
+        "valor_aprovado": 445353240.89,
+        "tempo_medio_aprovacao_dias": 15.59
+      },
+      {
+        "aprovador": "Srta. Larissa Fernandes",
+        "processos_aprovados": 1750.0,
+        "valor_aprovado": 442943652.55,
+        "tempo_medio_aprovacao_dias": 15.42
+      },
+      {
+        "aprovador": "Luiz Felipe Costa",
+        "processos_aprovados": 1744.0,
+        "valor_aprovado": 438698197.26,
+        "tempo_medio_aprovacao_dias": 15.67
+      },
+      {
+        "aprovador": "Liz Costela",
+        "processos_aprovados": 1752.0,
+        "valor_aprovado": 435488413.86,
+        "tempo_medio_aprovacao_dias": 15.27
+      }
+    ]
+  },
+  "tables": {
+    "department_performance": [
+      {
+        "departamento": "Operações",
+        "processos": 7127.0,
+        "valor_total": 1804706497.81,
+        "valor_aprovado": 1250915269.02,
+        "aprovados": 4941.0,
+        "pendentes": 1097.0,
+        "rejeitados_cancelados": 1089.0,
+        "tempo_medio_aprovacao_dias": 15.3,
+        "taxa_aprovacao_pct": 69.33
+      },
+      {
+        "departamento": "Jurídico",
+        "processos": 7236.0,
+        "valor_total": 1801089839.03,
+        "valor_aprovado": 1260628332.49,
+        "aprovados": 5074.0,
+        "pendentes": 1095.0,
+        "rejeitados_cancelados": 1067.0,
+        "tempo_medio_aprovacao_dias": 15.55,
+        "taxa_aprovacao_pct": 70.12
+      },
+      {
+        "departamento": "TI",
+        "processos": 7073.0,
+        "valor_total": 1798473010.52,
+        "valor_aprovado": 1257763689.43,
+        "aprovados": 4947.0,
+        "pendentes": 1093.0,
+        "rejeitados_cancelados": 1033.0,
+        "tempo_medio_aprovacao_dias": 15.69,
+        "taxa_aprovacao_pct": 69.94
+      },
+      {
+        "departamento": "RH",
+        "processos": 7225.0,
+        "valor_total": 1796314526.2,
+        "valor_aprovado": 1257433442.48,
+        "aprovados": 5080.0,
+        "pendentes": 1101.0,
+        "rejeitados_cancelados": 1044.0,
+        "tempo_medio_aprovacao_dias": 15.61,
+        "taxa_aprovacao_pct": 70.31
+      },
+      {
+        "departamento": "Financeiro",
+        "processos": 7178.0,
+        "valor_total": 1790612649.04,
+        "valor_aprovado": 1246579691.89,
+        "aprovados": 5021.0,
+        "pendentes": 1071.0,
+        "rejeitados_cancelados": 1086.0,
+        "tempo_medio_aprovacao_dias": 15.69,
+        "taxa_aprovacao_pct": 69.95
+      },
+      {
+        "departamento": "Marketing",
+        "processos": 7122.0,
+        "valor_total": 1783663221.85,
+        "valor_aprovado": 1263205983.33,
+        "aprovados": 5016.0,
+        "pendentes": 1061.0,
+        "rejeitados_cancelados": 1045.0,
+        "tempo_medio_aprovacao_dias": 15.61,
+        "taxa_aprovacao_pct": 70.43
+      },
+      {
+        "departamento": "Compras",
+        "processos": 7039.0,
+        "valor_total": 1758914549.87,
+        "valor_aprovado": 1230503427.06,
+        "aprovados": 4917.0,
+        "pendentes": 1043.0,
+        "rejeitados_cancelados": 1079.0,
+        "tempo_medio_aprovacao_dias": 15.45,
+        "taxa_aprovacao_pct": 69.85
+      }
+    ],
+    "contract_type_mix": [
+      {
+        "tipo_contrato": "Software",
+        "processos": 8437.0,
+        "valor_total": 2119477870.8,
+        "valor_aprovado": 1483687306.21,
+        "aprovados": 5907.0,
+        "taxa_aprovacao_pct": 70.01
+      },
+      {
+        "tipo_contrato": "Evento",
+        "processos": 8381.0,
+        "valor_total": 2109121462.85,
+        "valor_aprovado": 1473330873.68,
+        "aprovados": 5862.0,
+        "taxa_aprovacao_pct": 69.94
+      },
+      {
+        "tipo_contrato": "Fornecedor",
+        "processos": 8386.0,
+        "valor_total": 2107688968.66,
+        "valor_aprovado": 1462748423.45,
+        "aprovados": 5846.0,
+        "taxa_aprovacao_pct": 69.71
+      },
+      {
+        "tipo_contrato": "Consultoria",
+        "processos": 8306.0,
+        "valor_total": 2090032451.14,
+        "valor_aprovado": 1455227048.49,
+        "aprovados": 5824.0,
+        "taxa_aprovacao_pct": 70.12
+      },
+      {
+        "tipo_contrato": "Prestação de Serviços",
+        "processos": 8233.0,
+        "valor_total": 2054484529.89,
+        "valor_aprovado": 1455898398.4,
+        "aprovados": 5772.0,
+        "taxa_aprovacao_pct": 70.11
+      },
+      {
+        "tipo_contrato": "Treinamento",
+        "processos": 8257.0,
+        "valor_total": 2052969010.98,
+        "valor_aprovado": 1436137785.47,
+        "aprovados": 5785.0,
+        "taxa_aprovacao_pct": 70.06
+      }
+    ],
+    "approval_bottlenecks": [
+      {
+        "departamento": "Operações",
+        "processos_criticos": 2186.0,
+        "valor_em_risco": 553791228.79,
+        "pendentes": 1097.0,
+        "rejeitados_cancelados": 1089.0
+      },
+      {
+        "departamento": "Financeiro",
+        "processos_criticos": 2157.0,
+        "valor_em_risco": 544032957.15,
+        "pendentes": 1071.0,
+        "rejeitados_cancelados": 1086.0
+      },
+      {
+        "departamento": "TI",
+        "processos_criticos": 2126.0,
+        "valor_em_risco": 540709321.09,
+        "pendentes": 1093.0,
+        "rejeitados_cancelados": 1033.0
+      },
+      {
+        "departamento": "Jurídico",
+        "processos_criticos": 2162.0,
+        "valor_em_risco": 540461506.54,
+        "pendentes": 1095.0,
+        "rejeitados_cancelados": 1067.0
+      },
+      {
+        "departamento": "RH",
+        "processos_criticos": 2145.0,
+        "valor_em_risco": 538881083.72,
+        "pendentes": 1101.0,
+        "rejeitados_cancelados": 1044.0
+      },
+      {
+        "departamento": "Compras",
+        "processos_criticos": 2122.0,
+        "valor_em_risco": 528411122.81,
+        "pendentes": 1043.0,
+        "rejeitados_cancelados": 1079.0
+      },
+      {
+        "departamento": "Marketing",
+        "processos_criticos": 2106.0,
+        "valor_em_risco": 520457238.52,
+        "pendentes": 1061.0,
+        "rejeitados_cancelados": 1045.0
+      }
+    ],
+    "top_approvers": [
+      {
+        "aprovador": "Asafe Cardoso",
+        "processos_aprovados": 1821.0,
+        "valor_aprovado": 459306104.36,
+        "tempo_medio_aprovacao_dias": 15.53
+      },
+      {
+        "aprovador": "Sr. Theodoro Macedo",
+        "processos_aprovados": 1775.0,
+        "valor_aprovado": 456176695.63,
+        "tempo_medio_aprovacao_dias": 15.85
+      },
+      {
+        "aprovador": "Cecilia Alves",
+        "processos_aprovados": 1798.0,
+        "valor_aprovado": 454520655.68,
+        "tempo_medio_aprovacao_dias": 15.67
+      },
+      {
+        "aprovador": "Srta. Ana Lívia Monteiro",
+        "processos_aprovados": 1784.0,
+        "valor_aprovado": 449192310.09,
+        "tempo_medio_aprovacao_dias": 15.52
+      },
+      {
+        "aprovador": "Isadora Moraes",
+        "processos_aprovados": 1817.0,
+        "valor_aprovado": 447931126.17,
+        "tempo_medio_aprovacao_dias": 15.4
+      },
+      {
+        "aprovador": "Luiz Fernando Fogaça",
+        "processos_aprovados": 1772.0,
+        "valor_aprovado": 446952357.51,
+        "tempo_medio_aprovacao_dias": 15.62
+      },
+      {
+        "aprovador": "Pedro Henrique Nunes",
+        "processos_aprovados": 1743.0,
+        "valor_aprovado": 445353240.89,
+        "tempo_medio_aprovacao_dias": 15.59
+      },
+      {
+        "aprovador": "Srta. Larissa Fernandes",
+        "processos_aprovados": 1750.0,
+        "valor_aprovado": 442943652.55,
+        "tempo_medio_aprovacao_dias": 15.42
+      },
+      {
+        "aprovador": "Luiz Felipe Costa",
+        "processos_aprovados": 1744.0,
+        "valor_aprovado": 438698197.26,
+        "tempo_medio_aprovacao_dias": 15.67
+      },
+      {
+        "aprovador": "Liz Costela",
+        "processos_aprovados": 1752.0,
+        "valor_aprovado": 435488413.86,
+        "tempo_medio_aprovacao_dias": 15.27
+      }
+    ]
+  }
+}

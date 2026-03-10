@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administrative Process Optimization | Dalumia Consultoria</title>
+    <meta
+      name="description"
+      content="Administrative Process Optimization project focused on workflow efficiency, monitoring and data-driven reporting."
+    />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/admin-dashboard.js" defer></script>
+  </head>
+  <body data-dashboard-data-path="../data/admin_dashboard.json">
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+    <div class="page-shell">
+      <nav class="site-topbar reveal">
+        <a class="brand-link" href="../index.html">Dalumia Consultoria</a>
+        <a class="button secondary small" href="../index.html">Back to portfolio</a>
+      </nav>
+
+      <header class="hero reveal">
+        <p class="eyebrow">Project 02 • Administrative Process Optimization</p>
+        <div class="hero-grid">
+          <div>
+            <h1 id="project-title">Administrative Process Optimization</h1>
+            <p id="project-subtitle" class="hero-copy">
+              Improving administrative workflows with structured reporting, KPI monitoring and process transparency.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#dashboard">Explore dashboard</a>
+              <a class="button secondary" href="#methodology">See methodology</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <p class="panel-label">Project snapshot</p>
+            <dl class="project-meta">
+              <div>
+                <dt>Records</dt>
+                <dd id="meta-records">Loading...</dd>
+              </div>
+              <div>
+                <dt>Period</dt>
+                <dd id="meta-period">Loading...</dd>
+              </div>
+              <div>
+                <dt>Departments</dt>
+                <dd id="meta-departments">Loading...</dd>
+              </div>
+              <div>
+                <dt>Approvers</dt>
+                <dd id="meta-approvers">Loading...</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </header>
+
+      <main id="dashboard">
+        <section class="kpi-grid reveal" id="kpi-grid"></section>
+
+        <section class="insight-grid reveal">
+          <article class="story-card">
+            <p class="panel-label">Executive summary</p>
+            <h2>Operational context</h2>
+            <p id="project-description" class="story-copy">
+              This project examines administrative process flows to improve decision support, transparency and execution quality.
+            </p>
+            <div id="scope-list" class="scope-list"></div>
+          </article>
+          <article class="story-card">
+            <p class="panel-label">Actionable insights</p>
+            <h2>Where efficiency can improve</h2>
+            <div id="highlights" class="highlight-list"></div>
+          </article>
+        </section>
+
+        <section class="recommendation-panel reveal">
+          <div class="panel-headline">
+            <div>
+              <p class="panel-label">Decision support</p>
+              <h2>Recommendations for governance and operations</h2>
+            </div>
+            <p class="panel-copy">
+              Structured guidance to reduce bottlenecks, speed up approvals and increase process reliability.
+            </p>
+          </div>
+          <ul id="recommendations" class="recommendation-list"></ul>
+        </section>
+
+        <section class="chart-grid reveal">
+          <article class="panel panel-wide">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Pipeline trend</p>
+                <h2>Processes and approvals by month</h2>
+              </div>
+            </div>
+            <canvas id="monthlyAdminChart"></canvas>
+          </article>
+          <article class="panel">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Status mix</p>
+                <h2>Process status distribution</h2>
+              </div>
+            </div>
+            <canvas id="statusChart"></canvas>
+          </article>
+          <article class="panel">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Department view</p>
+                <h2>Approval rate by department</h2>
+              </div>
+            </div>
+            <canvas id="departmentChart"></canvas>
+          </article>
+          <article class="panel panel-wide">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Approver performance</p>
+                <h2>Top approvers by approved value</h2>
+              </div>
+            </div>
+            <canvas id="approverChart"></canvas>
+          </article>
+        </section>
+
+        <section class="table-grid reveal">
+          <article class="panel">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Department performance</p>
+                <h2>Operational overview</h2>
+              </div>
+            </div>
+            <div class="table-shell">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Department</th>
+                    <th>Total value</th>
+                    <th>Approval rate</th>
+                    <th>Avg. days</th>
+                  </tr>
+                </thead>
+                <tbody id="departmentsTable"></tbody>
+              </table>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-headline compact">
+              <div>
+                <p class="panel-label">Bottlenecks</p>
+                <h2>Critical backlog by department</h2>
+              </div>
+            </div>
+            <div class="table-shell">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Department</th>
+                    <th>Critical cases</th>
+                    <th>Value at risk</th>
+                    <th>Pending</th>
+                  </tr>
+                </thead>
+                <tbody id="bottlenecksTable"></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <section class="method-grid reveal" id="methodology">
+          <article class="story-card">
+            <p class="panel-label">Methodology</p>
+            <h2>How this administrative project was structured</h2>
+            <p class="story-copy">
+              The analysis maps administrative workflows from request to decision, highlighting cycle-time patterns, conversion rates and risk concentration.
+            </p>
+            <div class="method-cards">
+              <div>
+                <h3>1. Process mapping</h3>
+                <p>Consolidated each process by status, department, contract type and approval owner.</p>
+              </div>
+              <div>
+                <h3>2. KPI design</h3>
+                <p>Built indicators for approval rate, value flow, pending load and operational bottlenecks.</p>
+              </div>
+              <div>
+                <h3>3. Monitoring layer</h3>
+                <p>Delivered a static dashboard for governance routines and strategic review meetings.</p>
+              </div>
+            </div>
+          </article>
+          <article class="story-card">
+            <p class="panel-label">Stack</p>
+            <h2>Tools used in the project</h2>
+            <ul class="stack-list">
+              <li>Python and pandas for process analytics and KPI modeling</li>
+              <li>Chart.js for visualization of workflow and performance indicators</li>
+              <li>HTML, CSS and JavaScript for interactive reporting</li>
+              <li>GitHub Pages for public portfolio deployment</li>
+            </ul>
+            <div class="generated-at">
+              <span>Last data refresh</span>
+              <strong id="generatedAt">Loading...</strong>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

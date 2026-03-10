@@ -22,11 +22,10 @@ const chartPalette = {
   clay: "#b7552f",
   gold: "#d8ad5a",
   ink: "#17201d",
-  sand: "#f4ead8",
 };
 
 const chartInstances = [];
-const dashboardDataPath = document.body.dataset.dashboardDataPath || "data/sales_dashboard.json";
+const dashboardDataPath = document.body.dataset.dashboardDataPath || "../data/admin_dashboard.json";
 
 document.addEventListener("DOMContentLoaded", () => {
   initDashboard().catch((error) => {
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function initDashboard() {
   const response = await fetch(dashboardDataPath);
   if (!response.ok) {
-    throw new Error("Could not load dashboard data.");
+    throw new Error("Could not load administrative dashboard data.");
   }
 
   const data = await response.json();
@@ -47,7 +46,7 @@ async function initDashboard() {
   renderHighlights(data.highlights);
   renderRecommendations(data.recommendations);
   renderTables(data.tables);
-  renderCharts(data.series, data.tables);
+  renderCharts(data.series);
   document.getElementById("generatedAt").textContent = formatDateTime(data.meta.generated_at);
 }
 
@@ -55,44 +54,47 @@ function renderHero(data) {
   document.getElementById("project-title").textContent = data.project.title;
   document.getElementById("project-subtitle").textContent = data.project.subtitle;
   document.getElementById("project-description").textContent = data.project.description;
-  document.getElementById("meta-records").textContent = `${numberFormatter.format(data.meta.records)} rows`;
+
+  document.getElementById("meta-records").textContent = `${numberFormatter.format(data.meta.records)} records`;
   document.getElementById("meta-period").textContent = `${formatDate(data.meta.period_start)} - ${formatDate(data.meta.period_end)}`;
-  document.getElementById("meta-products").textContent = numberFormatter.format(data.meta.products);
-  document.getElementById("meta-sellers").textContent = numberFormatter.format(data.meta.sellers);
+  document.getElementById("meta-departments").textContent = numberFormatter.format(data.meta.departments);
+  document.getElementById("meta-approvers").textContent = numberFormatter.format(data.meta.approvers);
 }
 
 function renderKpis(data) {
   const kpiGrid = document.getElementById("kpi-grid");
   const cards = [
     {
-      label: "Total revenue",
-      value: currencyFormatter.format(data.kpis.receita_total),
-      detail: `${numberFormatter.format(data.meta.records)} orders analyzed`,
+      label: "Total process value",
+      value: currencyFormatter.format(data.kpis.valor_total_processos),
+      detail: `${numberFormatter.format(data.meta.records)} total workflows`,
     },
     {
-      label: "Total profit",
-      value: currencyFormatter.format(data.kpis.lucro_total),
-      detail: `${percentFormatter.format(data.kpis.margem_lucro_pct)}% profit margin`,
+      label: "Approved value",
+      value: currencyFormatter.format(data.kpis.valor_aprovado),
+      detail: `${percentFormatter.format(data.kpis.taxa_aprovacao_pct)}% approval rate`,
     },
     {
-      label: "Average ticket",
-      value: preciseCurrencyFormatter.format(data.kpis.ticket_medio),
-      detail: `${percentFormatter.format(data.kpis.itens_medios)} items per order`,
+      label: "Average approval time",
+      value: `${percentFormatter.format(data.kpis.tempo_medio_aprovacao_dias)} days`,
+      detail: "Average cycle for approved workflows",
     },
     {
-      label: "Active catalog",
-      value: numberFormatter.format(data.meta.products),
-      detail: "Distinct products sold",
+      label: "Pending workflows",
+      value: numberFormatter.format(data.kpis.processos_pendentes),
+      detail: "Processes waiting for decision",
     },
     {
-      label: "Salesforce",
-      value: numberFormatter.format(data.meta.sellers),
-      detail: "Active sellers in the dataset",
+      label: "Rejected or canceled",
+      value: numberFormatter.format(data.kpis.processos_rejeitados_cancelados),
+      detail: "Critical backlog requiring action",
     },
     {
-      label: "Highest margin category",
-      value: data.tables.highest_margin_category.categoria,
-      detail: `${percentFormatter.format(data.tables.highest_margin_category.margem_pct)}% margin`,
+      label: "Average approved ticket",
+      value: preciseCurrencyFormatter.format(
+        data.kpis.valor_aprovado / Math.max(data.kpis.processos_aprovados, 1),
+      ),
+      detail: "Reference ratio for process value density",
     },
   ];
 
@@ -137,160 +139,168 @@ function renderRecommendations(recommendations) {
 }
 
 function renderTables(tables) {
-  document.getElementById("productsTable").innerHTML = tables.top_products
+  document.getElementById("departmentsTable").innerHTML = tables.department_performance
     .map(
       (item) => `
         <tr>
-          <td>${item.produto}</td>
-          <td>${item.categoria}</td>
-          <td>${currencyFormatter.format(item.receita)}</td>
-          <td>${percentFormatter.format(item.margem_pct)}%</td>
+          <td>${item.departamento}</td>
+          <td>${currencyFormatter.format(item.valor_total)}</td>
+          <td>${percentFormatter.format(item.taxa_aprovacao_pct)}%</td>
+          <td>${percentFormatter.format(item.tempo_medio_aprovacao_dias || 0)} days</td>
         </tr>
       `,
     )
     .join("");
 
-  document.getElementById("categoriesTable").innerHTML = tables.category_performance
+  document.getElementById("bottlenecksTable").innerHTML = tables.approval_bottlenecks
     .map(
       (item) => `
         <tr>
-          <td>${item.categoria}</td>
-          <td>${currencyFormatter.format(item.receita)}</td>
-          <td>${currencyFormatter.format(item.lucro)}</td>
-          <td>${percentFormatter.format(item.margem_pct)}%</td>
+          <td>${item.departamento}</td>
+          <td>${numberFormatter.format(item.processos_criticos)}</td>
+          <td>${currencyFormatter.format(item.valor_em_risco)}</td>
+          <td>${numberFormatter.format(item.pendentes)}</td>
         </tr>
       `,
     )
     .join("");
 }
 
-function renderCharts(series, tables) {
+function renderCharts(series) {
   destroyCharts();
-  renderMonthlyChart(series.monthly_performance);
-  renderCategoryChart(tables.category_performance);
-  renderRegionChart(tables.region_performance);
-  renderSellerChart(tables.top_sellers);
+  renderMonthlyChart(series.monthly_pipeline);
+  renderStatusChart(series.status_distribution);
+  renderDepartmentChart(series.department_performance);
+  renderApproverChart(series.top_approvers);
 }
 
-function renderMonthlyChart(monthlyData) {
-  const canvas = document.getElementById("monthlyChart");
+function renderMonthlyChart(monthly) {
+  const canvas = document.getElementById("monthlyAdminChart");
   const context = canvas.getContext("2d");
-  const gradient = context.createLinearGradient(0, 0, 0, 320);
-  gradient.addColorStop(0, "rgba(202, 124, 49, 0.28)");
-  gradient.addColorStop(1, "rgba(202, 124, 49, 0.02)");
 
   const chart = new Chart(context, {
     type: "line",
     data: {
-      labels: monthlyData.map((item) => item.mes),
+      labels: monthly.map((item) => item.mes),
       datasets: [
         {
-          label: "Revenue",
-          data: monthlyData.map((item) => item.receita),
-          borderColor: chartPalette.amber,
-          backgroundColor: gradient,
-          fill: true,
-          tension: 0.32,
-          borderWidth: 3,
-          pointRadius: 2,
-        },
-        {
-          label: "Profit",
-          data: monthlyData.map((item) => item.lucro),
+          label: "Total processes",
+          data: monthly.map((item) => item.processos),
           borderColor: chartPalette.forest,
-          backgroundColor: "rgba(35, 66, 61, 0.08)",
+          backgroundColor: "rgba(35, 66, 61, 0.18)",
+          fill: true,
+          tension: 0.3,
+          borderWidth: 3,
+          pointRadius: 2,
+        },
+        {
+          label: "Approved",
+          data: monthly.map((item) => item.aprovados),
+          borderColor: chartPalette.amber,
+          backgroundColor: "rgba(202, 124, 49, 0.08)",
           fill: false,
-          tension: 0.32,
+          tension: 0.3,
           borderWidth: 3,
           pointRadius: 2,
         },
       ],
     },
-    options: baseChartOptions({
-      yAsCurrency: true,
-    }),
+    options: baseChartOptions(),
   });
 
   chartInstances.push(chart);
 }
 
-function renderCategoryChart(categoryData) {
-  const canvas = document.getElementById("categoryChart");
+function renderStatusChart(statusDistribution) {
+  const canvas = document.getElementById("statusChart");
   const context = canvas.getContext("2d");
+  const chart = new Chart(context, {
+    type: "doughnut",
+    data: {
+      labels: statusDistribution.map((item) => item.status),
+      datasets: [
+        {
+          label: "Processes",
+          data: statusDistribution.map((item) => item.quantidade),
+          backgroundColor: ["#23423d", "#648a64", "#ca7c31", "#b7552f"],
+          borderColor: "rgba(255,255,255,0.8)",
+          borderWidth: 2,
+        },
+      ],
+    },
+    options: {
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          labels: {
+            color: chartPalette.ink,
+            font: {
+              family: "Space Grotesk",
+            },
+          },
+        },
+        tooltip: {
+          callbacks: {
+            label(context) {
+              return `${context.label}: ${numberFormatter.format(context.parsed)}`;
+            },
+          },
+        },
+      },
+    },
+  });
+
+  chartInstances.push(chart);
+}
+
+function renderDepartmentChart(departments) {
+  const canvas = document.getElementById("departmentChart");
+  const context = canvas.getContext("2d");
+
   const chart = new Chart(context, {
     type: "bar",
     data: {
-      labels: categoryData.map((item) => item.categoria),
+      labels: departments.map((item) => item.departamento),
       datasets: [
         {
-          label: "Revenue",
-          data: categoryData.map((item) => item.receita),
-          backgroundColor: [
-            "#23423d",
-            "#648a64",
-            "#ca7c31",
-            "#d8ad5a",
-            "#b7552f",
-          ],
-          borderRadius: 12,
+          label: "Approval rate",
+          data: departments.map((item) => item.taxa_aprovacao_pct),
+          backgroundColor: "rgba(35, 66, 61, 0.84)",
+          borderRadius: 10,
         },
       ],
     },
     options: baseChartOptions({
       indexAxis: "y",
-      yAsCurrency: true,
-      legend: false,
-    }),
-  });
-
-  chartInstances.push(chart);
-}
-
-function renderRegionChart(regionData) {
-  const canvas = document.getElementById("regionChart");
-  const context = canvas.getContext("2d");
-  const chart = new Chart(context, {
-    type: "bar",
-    data: {
-      labels: regionData.map((item) => item.regiao),
-      datasets: [
-        {
-          label: "Profit margin",
-          data: regionData.map((item) => item.margem_pct),
-          backgroundColor: ["#23423d", "#648a64", "#ca7c31", "#d8ad5a", "#b7552f"],
-          borderRadius: 12,
-        },
-      ],
-    },
-    options: baseChartOptions({
-      legend: false,
       ySuffix: "%",
+      legend: false,
     }),
   });
 
   chartInstances.push(chart);
 }
 
-function renderSellerChart(sellerData) {
-  const canvas = document.getElementById("sellerChart");
+function renderApproverChart(approvers) {
+  const canvas = document.getElementById("approverChart");
   const context = canvas.getContext("2d");
+
   const chart = new Chart(context, {
     type: "bar",
     data: {
-      labels: sellerData.map((item) => item.nome_vendedor),
+      labels: approvers.map((item) => item.aprovador),
       datasets: [
         {
-          label: "Revenue",
-          data: sellerData.map((item) => item.receita),
-          backgroundColor: "rgba(35, 66, 61, 0.88)",
-          borderRadius: 12,
+          label: "Approved value",
+          data: approvers.map((item) => item.valor_aprovado),
+          backgroundColor: "rgba(202, 124, 49, 0.86)",
+          borderRadius: 10,
         },
       ],
     },
     options: baseChartOptions({
       indexAxis: "y",
-      legend: false,
       yAsCurrency: true,
+      legend: false,
     }),
   });
 
